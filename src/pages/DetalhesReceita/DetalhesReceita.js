@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { obterReceitaPorId } from '../../api';
+import './detailreceita.css';
 
 function DetalhesReceita() {
   const { id } = useParams();
@@ -13,7 +14,7 @@ function DetalhesReceita() {
   if (!receita) return <div>Carregando...</div>;
 
   return (
-    <div>
+    <div className="container">
       <h1>{receita.titulo}</h1>
       <h3>Ingredientes:</h3>
       <ul>
@@ -23,6 +24,7 @@ function DetalhesReceita() {
       </ul>
       <h3>Modo de Preparo:</h3>
       <p>{receita.modoPreparo}</p>
+      <Link to="/" className="back-button">Voltar para a lista</Link>
     </div>
   );
 }

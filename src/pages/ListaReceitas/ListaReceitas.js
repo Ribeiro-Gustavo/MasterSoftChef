@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { obterReceitas } from '../../api';
+import './listareceita.css';
 
 function ListaReceitas() {
   const [receitas, setReceitas] = useState([]);
@@ -10,7 +11,10 @@ function ListaReceitas() {
   }, []);
 
   return (
-    <div>
+    <div className="lista">
+      <header className="header">
+        MasterSoftChef
+      </header>
       <h1>Lista de Receitas</h1>
       <ul>
         {receitas.map((receita) => (
