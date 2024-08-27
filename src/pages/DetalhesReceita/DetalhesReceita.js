@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { obterReceitaPorId } from '../api';
+import { obterReceitaPorId } from '../../api';
 
 function DetalhesReceita() {
   const { id } = useParams();

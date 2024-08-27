@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { adicionarReceita } from '../api';
+import { adicionarReceita } from '../../api';
+import './addreceita.css'
 
 function AdicionarReceita() {
   const [titulo, setTitulo] = useState('');
@@ -21,7 +22,7 @@ function AdicionarReceita() {
   };
 
   return (
-    <div>
+    <div className='container'>
       <h1>Adicionar Nova Receita</h1>
       <form onSubmit={handleSubmit}>
         <div>
